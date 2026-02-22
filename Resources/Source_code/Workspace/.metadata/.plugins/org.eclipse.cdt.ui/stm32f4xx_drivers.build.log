@@ -1,7 +1,16 @@
-11:26:23 **** Clean-only build of configuration Debug for project stm32f4xx_drivers ****
-make -j4 clean 
-rm -rf *
+02:07:28 **** Incremental Build of configuration Debug for project stm32f4xx_drivers ****
+make -j22 all 
+arm-none-eabi-gcc -o "stm32f4xx_drivers.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\MUNAFA\Desktop\CorsiUdemy\MasteringMCU\Resources\Source_code\Workspace\stm32f4xx_drivers\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32f4xx_drivers.map" -Wl,--gc-sections -static -Wl,--no-warn-rwx-segments --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: stm32f4xx_drivers.elf
+ 
+arm-none-eabi-size  stm32f4xx_drivers.elf 
+arm-none-eabi-objdump -h -S stm32f4xx_drivers.elf  > "stm32f4xx_drivers.list"
+   text	   data	    bss	    dec	    hex	filename
+   1884	      8	   1568	   3460	    d84	stm32f4xx_drivers.elf
+Finished building: default.size.stdout
+ 
+Finished building: stm32f4xx_drivers.list
  
 
-11:26:25 Build Finished (took 1s.909ms)
+02:07:29 Build Finished. 0 errors, 0 warnings. (took 1s.49ms)
 

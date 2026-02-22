@@ -1,6 +1,6 @@
 ################################################################################
 # Automatically-generated file. Do not edit!
-# Toolchain: GNU Tools for STM32 (11.3.rel1)
+# Toolchain: GNU Tools for STM32 (13.3.rel1)
 ################################################################################
 
 -include ../makefile.init
@@ -11,7 +11,6 @@ RM := rm -rf
 -include sources.mk
 -include src/subdir.mk
 -include drivers/src/subdir.mk
--include bsp/subdir.mk
 -include autogen/subdir.mk
 -include objects.mk
 
@@ -61,8 +60,8 @@ all: main-build
 main-build: stm32f4xx_drivers.elf secondary-outputs
 
 # Tool invocations
-stm32f4xx_drivers.elf stm32f4xx_drivers.map: $(OBJS) $(USER_OBJS) C:\Users\Shishir\ Dey\Documents\Bharati\ Software\MasteringMCU\Resources\Source_code\Workspace\stm32f4xx_drivers\STM32F407VGTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "stm32f4xx_drivers.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\Shishir Dey\Documents\Bharati Software\MasteringMCU\Resources\Source_code\Workspace\stm32f4xx_drivers\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32f4xx_drivers.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+stm32f4xx_drivers.elf stm32f4xx_drivers.map: $(OBJS) $(USER_OBJS) C:\Users\MUNAFA\Desktop\CorsiUdemy\MasteringMCU\Resources\Source_code\Workspace\stm32f4xx_drivers\STM32F407VGTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "stm32f4xx_drivers.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\MUNAFA\Desktop\CorsiUdemy\MasteringMCU\Resources\Source_code\Workspace\stm32f4xx_drivers\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32f4xx_drivers.map" -Wl,--gc-sections -static -Wl,--no-warn-rwx-segments --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
